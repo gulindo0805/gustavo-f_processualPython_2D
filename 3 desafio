@@ -15,6 +15,9 @@ for i in range(len(nomes)):
  
     if (i+1) % 15 == 0:
         print("teste")
+    
+    if nomes == "Úrsula":
+        print ("bonus")
       
     if (i) == 85 :
         print("fim")
