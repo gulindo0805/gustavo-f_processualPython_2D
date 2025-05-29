@@ -1,0 +1,55 @@
+def processar_nomes():
+    nomes = [] 
+
+    print("Por favor, insira 10 nomes, um por vez:")
+
+    for i in range(10):
+        while True:
+            nome = input(f"Nome {i+1}: ").strip() 
+            
+            if not nome:
+                print("O nome não pode ser vazio. Por favor, digite um nome válido.")
+                continue
+            if not all(c.isalpha() or c.isspace() for c in nome):
+                print("Erro: O nome contém caracteres inválidos. Use apenas letras e espaços.")
+                return
+            nomes.append(nome) 
+            break 
+    nomes_ordenados = sorted(nomes)
+
+    print("\n--- Nomes em Ordem Alfabética e Quantidade de Letras ---")
+  
+    for nome_individual in nomes_ordenados:
+     
+        print(f"{nome_individual}: {len(nome_individual.replace(' ', ''))} letras")
+processar_nomes()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
