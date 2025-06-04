@@ -1,0 +1,22 @@
+print("--- Início do Pagamento PIX ---")
+chave_pix_recebedor = "123456789-10"
+nome_recebedor = "pedro."
+try:
+    valor_a_pagar = float(input("Digite o valor que deseja pagar R$ "))          float n,, input inserir dado
+    if valor_a_pagar <= 0:
+        print("O valor deve ser maior que zero.")
+        exit() # Encerra o programa se o valor for inválido
+except ValueError:
+    print(" Por favor, digite um número para o valor. Pagamento cancelado.")
+    exit() # Encerra o programa se a entrada não for um número
+
+print("\n--- Dados para o Pagamento PIX ---")
+print(f"Chave PIX: {chave_pix_recebedor}")
+print(f"Nome do Recebedor: {nome_recebedor}")
+print(f"Valor: R$ {valor_a_pagar:}")
+
+processo_contador = 0
+print("\nIniciando verificação do pagamento...")
+print("Pagamento PIX Realizado com Sucesso!    ")
+print(f"O valor de R$ {valor_a_pagar:} foi processado para {nome_recebedor}.")
+print("Agradecemos a sua compra!")
