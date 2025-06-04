@@ -1,0 +1,24 @@
+print("--- Simulação de Investimento ---")
+
+# Solicita o valor a ser investido
+try:
+    valor_investido = float(input("Digite o valor que deseja investir: R$ "))
+    if valor_investido <= 0:
+        print("O valor precisa ser maior que zero. Operação cancelada.")
+        exit()
+except ValueError:
+    print("Valor inválido. Use apenas números. Operação cancelada.")
+    exit()
+
+print(f"\nConfirmando investimento de R$ {valor_investido:.2f}...")
+
+# Aqui, o "resultado" é fixo para simplificar ao máximo sem 'random'
+# Vamos simular um ganho fixo de 5% para este exemplo
+retorno_percentual_fixo = 0.05
+ganho_perda = valor_investido * retorno_percentual_fixo
+valor_final = valor_investido + ganho_perda
+
+print("\n--- Resultado da Simulação ---")
+print(f"Valor Investido: R$ {valor_investido:.2f}")
+print(f"Ganho Projetado: R$ {ganho_perda:.2f} ({retorno_percentual_fixo:.2%})")
+print(f"Valor Final Projetado: R$ {valor_final:.2f}")
